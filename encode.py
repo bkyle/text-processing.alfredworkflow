@@ -16,7 +16,9 @@ def main(wf):
         encoded = encoder(args[0])
         wf.add_item(title=encoded,
                     subtitle=name,
-                    copytext=encoded)
+                    arg=encoded,
+                    copytext=encoded,
+                    valid=True)
     wf.send_feedback()
 
 if __name__ == "__main__":
