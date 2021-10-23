@@ -4,15 +4,6 @@ import re
 import sys
 from workflow import Workflow3
 
-def int2hex(s):
-    return "0x{:02x}".format(int(s))
-
-def int2oct(s):
-    pass
-
-def int2bin(s):
-    pass
-
 def snake_case(s):
     return re.sub(" ", "_", s)
 
