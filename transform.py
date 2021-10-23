@@ -53,7 +53,9 @@ def main(wf):
             transformed = transformer(x)
             wf.add_item(title=transformed,
                         subtitle=name,
-                        copytext=transformed)
+                        arg=transformed,
+                        copytext=transformed,
+                        valid=True)
     except ValueError as e:
         pass
 
@@ -71,7 +73,9 @@ def main(wf):
        transformed = transformer(s)
        wf.add_item(title=transformed,
                    subtitle=name,
-                   copytext=transformed)
+                   arg=transformed,
+                   copytext=transformed,
+                   valid=True)
 
     wf.send_feedback()
 
