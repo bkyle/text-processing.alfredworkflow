@@ -32,6 +32,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>DB20FF40-777A-49D4-B082-9CD748F8F94F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DF75135B-1FCE-4162-92E7-B93C1EB889C9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB20FF40-777A-49D4-B082-9CD748F8F94F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Bryan Kyle</string>
@@ -160,6 +186,69 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>8</integer>
+				<key>hotmod</key>
+				<integer>1703936</integer>
+				<key>hotstring</key>
+				<string>C</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>DF75135B-1FCE-4162-92E7-B93C1EB889C9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>DB20FF40-777A-49D4-B082-9CD748F8F94F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -167,24 +256,53 @@
 	<dict>
 		<key>4D5AF64F-36C3-425C-A1AF-27CAF5790E12</key>
 		<dict>
+			<key>note</key>
+			<string>Apply a collection of transformations to some text and present it as a list.</string>
 			<key>xpos</key>
-			<integer>165</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<integer>270</integer>
+			<integer>205</integer>
+		</dict>
+		<key>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>405</integer>
+			<key>ypos</key>
+			<integer>410</integer>
 		</dict>
 		<key>71F2A25E-4FF2-4BCE-9B81-21CFCAC21CFE</key>
 		<dict>
+			<key>note</key>
+			<string>Encode text in a variety of different encodings.</string>
 			<key>xpos</key>
-			<integer>165</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<integer>145</integer>
+			<integer>30</integer>
+		</dict>
+		<key>DB20FF40-777A-49D4-B082-9CD748F8F94F</key>
+		<dict>
+			<key>note</key>
+			<string>...because we're not animals, trim the whitespace.</string>
+			<key>xpos</key>
+			<integer>275</integer>
+			<key>ypos</key>
+			<integer>440</integer>
+		</dict>
+		<key>DF75135B-1FCE-4162-92E7-B93C1EB889C9</key>
+		<dict>
+			<key>note</key>
+			<string>Copy the current selection to the clipboard as plain text.  This comes in handy to get plain text content out of rich text fields, web pages, etc.</string>
+			<key>xpos</key>
+			<integer>75</integer>
+			<key>ypos</key>
+			<integer>410</integer>
 		</dict>
 		<key>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>195</integer>
+			<integer>130</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
