@@ -6,6 +6,32 @@
 	<string>com.bryankyle.textprocessing</string>
 	<key>connections</key>
 	<dict>
+		<key>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2D718740-28C5-4B18-98D5-1BC610F378A8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AE8B461C-09DC-4C21-8067-8254FEE667BA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4D5AF64F-36C3-425C-A1AF-27CAF5790E12</key>
 		<array>
 			<dict>
@@ -24,6 +50,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>16377B48-4664-4EFC-8DB8-AD45192F9B49</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AE8B461C-09DC-4C21-8067-8254FEE667BA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0843E362-1C33-4D5A-B1CB-DC12F6C71DB7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -121,6 +173,77 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>16377B48-4664-4EFC-8DB8-AD45192F9B49</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>hex=`pbpaste | /usr/local/bin/pandoc -t html -s --highlight-style pygments | hexdump -ve '1/1 "%.2x"'`
+osascript -e "set the clipboard to «data HTML${hex}»"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>md2html</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>tm</string>
+				<key>subtext</key>
+				<string>Transform Markdown text on the clipboard to rich text</string>
+				<key>text</key>
+				<string>Transform Markdown</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>inputmode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -136,6 +259,86 @@
 			<string>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>count</key>
+				<integer>1</integer>
+				<key>keychar</key>
+				<string>v</string>
+				<key>keycode</key>
+				<integer>-1</integer>
+				<key>keymod</key>
+				<integer>1048576</integer>
+				<key>overridewithargument</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.dispatchkeycombo</string>
+			<key>uid</key>
+			<string>0843E362-1C33-4D5A-B1CB-DC12F6C71DB7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>9</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>V</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.microsoft.Word</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>2</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>2D718740-28C5-4B18-98D5-1BC610F378A8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>hex=`pbpaste | /usr/local/bin/pandoc -t html -s --highlight-style pygments | hexdump -ve '1/1 "%.2x"'`
+osascript -e "set the clipboard to «data HTML${hex}»"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>md2html</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AE8B461C-09DC-4C21-8067-8254FEE667BA</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -189,6 +392,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -220,25 +442,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -254,6 +457,34 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0843E362-1C33-4D5A-B1CB-DC12F6C71DB7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1025</integer>
+			<key>ypos</key>
+			<integer>195</integer>
+		</dict>
+		<key>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</key>
+		<dict>
+			<key>xpos</key>
+			<integer>635</integer>
+			<key>ypos</key>
+			<integer>55</integer>
+		</dict>
+		<key>16377B48-4664-4EFC-8DB8-AD45192F9B49</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1030</integer>
+			<key>ypos</key>
+			<integer>55</integer>
+		</dict>
+		<key>2D718740-28C5-4B18-98D5-1BC610F378A8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>635</integer>
+			<key>ypos</key>
+			<integer>195</integer>
+		</dict>
 		<key>4D5AF64F-36C3-425C-A1AF-27CAF5790E12</key>
 		<dict>
 			<key>note</key>
@@ -278,6 +509,20 @@
 			<integer>70</integer>
 			<key>ypos</key>
 			<integer>30</integer>
+		</dict>
+		<key>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</key>
+		<dict>
+			<key>xpos</key>
+			<integer>830</integer>
+			<key>ypos</key>
+			<integer>55</integer>
+		</dict>
+		<key>AE8B461C-09DC-4C21-8067-8254FEE667BA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>825</integer>
+			<key>ypos</key>
+			<integer>195</integer>
 		</dict>
 		<key>DB20FF40-777A-49D4-B082-9CD748F8F94F</key>
 		<dict>
