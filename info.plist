@@ -58,6 +58,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8B062CEB-55C1-4FD0-9EB5-D66CDC510BA6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</key>
 		<array>
 			<dict>
@@ -392,6 +405,55 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ci</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>color.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Color Info</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8B062CEB-55C1-4FD0-9EB5-D66CDC510BA6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -501,9 +563,9 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 		<key>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>405</integer>
+			<integer>395</integer>
 			<key>ypos</key>
-			<integer>410</integer>
+			<integer>725</integer>
 		</dict>
 		<key>71F2A25E-4FF2-4BCE-9B81-21CFCAC21CFE</key>
 		<dict>
@@ -513,6 +575,15 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<integer>70</integer>
 			<key>ypos</key>
 			<integer>30</integer>
+		</dict>
+		<key>8B062CEB-55C1-4FD0-9EB5-D66CDC510BA6</key>
+		<dict>
+			<key>note</key>
+			<string>Takes a color in hex form, e.g. #c0c0c0, and provides a variety of different encodings of it.</string>
+			<key>xpos</key>
+			<integer>65</integer>
+			<key>ypos</key>
+			<integer>420</integer>
 		</dict>
 		<key>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</key>
 		<dict>
@@ -533,18 +604,18 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>note</key>
 			<string>...because we're not animals, trim the whitespace.</string>
 			<key>xpos</key>
-			<integer>275</integer>
+			<integer>265</integer>
 			<key>ypos</key>
-			<integer>440</integer>
+			<integer>755</integer>
 		</dict>
 		<key>DF75135B-1FCE-4162-92E7-B93C1EB889C9</key>
 		<dict>
 			<key>note</key>
 			<string>Copy the current selection to the clipboard as plain text.  This comes in handy to get plain text content out of rich text fields, web pages, etc.</string>
 			<key>xpos</key>
-			<integer>75</integer>
+			<integer>65</integer>
 			<key>ypos</key>
-			<integer>410</integer>
+			<integer>725</integer>
 		</dict>
 		<key>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</key>
 		<dict>
