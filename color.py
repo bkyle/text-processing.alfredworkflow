@@ -76,9 +76,12 @@ class Color:
 
 def main(wf):
     args = wf.args
-    args = ["78a9ff"]
+    # args = ["78a9ff"]
 
-    color = Color(hex2rgb(args[0]))
+    rgb = hex2rgb(args[0])
+    if rgb is None:
+        return
+    color = Color(rgb)
     values = [(color.asHex(), "HEX"),
               (color.asRGB(), "Red, Green, Blue"),
               (color.asHSL(), "Hue, Saturation, Lightness")]
