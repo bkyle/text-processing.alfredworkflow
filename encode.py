@@ -1,16 +1,21 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+import sys
+import os
+
+sys.path.append(os.path.join(os.path.dirname(sys.argv[0]), "lib"))
 
 import base64
 import sys
-import urllib
+import urllib.parse
 from workflow import Workflow3
 
 def main(wf):
     args = wf.args
 
-    encoders = [(urllib.quote, "URL (Percent)"),
-                (urllib.quote_plus, "URL (Plus)"),
-                (base64.encodestring, "Base 64")]
+    encoders = [(urllib.parse.quote, "URL (Percent)"),
+                (urllib.parse.quote_plus, "URL (Plus)"),
+                (lambda x: base64.b64encode(x.encode()).decode(), "Base 64")]
     for encoder, name in encoders:
         encoded = encoder(args[0])
         wf.add_item(title=encoded,

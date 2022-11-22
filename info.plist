@@ -186,6 +186,32 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>tm</string>
+				<key>subtext</key>
+				<string>Transform Markdown text on the clipboard to rich text</string>
+				<key>text</key>
+				<string>Transform Markdown</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>inputmode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -227,32 +253,6 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<string>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>tm</string>
-				<key>subtext</key>
-				<string>Transform Markdown text on the clipboard to rich text</string>
-				<key>text</key>
-				<string>Transform Markdown</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>inboundconfig</key>
-			<dict>
-				<key>inputmode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
