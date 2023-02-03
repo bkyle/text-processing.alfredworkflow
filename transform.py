@@ -1,7 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+import os
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(sys.argv[0]), "lib"))
 
 import re
-import sys
 from workflow import Workflow3
 
 def snake_case(s):
@@ -33,6 +37,9 @@ def h4ck3rC453(s):
 
     return "".join([h4ck3r1ze(c) for c in s])
 
+def remove_newlines(s):
+    return re.sub(r"\s*\r?\n\s*", " ", s)
+
 def main(wf):
 
     s = wf.args[0]
@@ -59,11 +66,12 @@ def main(wf):
     except ValueError as e:
         pass
 
-    text_transformers = [(unicode.upper, "UPPER"),
-                         (unicode.lower, "lower"),
-                         (unicode.title, "Title Case"),
-                         (unicode.capitalize, "Capitalize"),
-                         (unicode.swapcase, "sWAP cASE"),
+    text_transformers = [(remove_newlines, "No newlines"),
+                         (str.upper, "UPPER"),
+                         (str.lower, "lower"),
+                         (str.title, "Title Case"),
+                         (str.capitalize, "Capitalize"),
+                         (str.swapcase, "sWAP cASE"),
                          (snake_case, "snake_case"),
                          (camelCase, "camelCase"),
                          (ProperCase, "ProperCase"),
