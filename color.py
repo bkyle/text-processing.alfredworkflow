@@ -6,11 +6,77 @@ import sys
 
 sys.path.append(os.path.join(os.path.dirname(sys.argv[0]), "lib"))
 
+import re
 import base64
 import sys
 import urllib
-import re
+
+from typing import Optional
+
 from workflow import Workflow3
+
+
+wf = Workflow3()
+logger = wf.logger
+
+def color2rgb(s) -> Optional[tuple]:
+    """Converts a named color, e.g. "cyan", to a tuple of integers representing the red, green,
+    and blue channels of the color.
+    
+    Args:
+      s: string containing the name of the color.
+
+    Returns:
+      A tuple containing integers representing the red, green, and blue channels of the color
+      or `None` if the string does not name a known color.    
+    """
+    return None
+
+def generate_icon(color: str) -> Optional[str]:
+    """Generates an icon representing the passed color in the Alfred workflow cache and
+    returns a string containing the path to the icon.  If an icon is not generated then
+    `None` is returned.
+    
+    Args:
+      color: string containing the name of the color.
+    """
+    return None
+
+
+# The functions in this section require Pillow which may not be present.  If the package is not
+# present then the default implementation (above) is used.
+try:
+    from PIL import Image, ImageColor
+
+    def color2rgb(s):
+        """See `color2rgb`."""
+        if not s:
+            return None
+        if s.startswith("#"):
+            # hex strings should be processed with hex2rgb
+            return None
+        try:
+            rgb = ImageColor.getrgb(s)
+            logger.debug("%s => %s" % (s, rgb))
+            return (rgb[0], rgb[1], rgb[2])
+        except ValueError:
+            return None
+
+    def generate_icon(color: tuple[int,int,int]) -> str:
+        """See `generate_icon`."""
+        if not color:
+            return None
+
+        image = Image.new('RGB', (128, 128), color)
+
+        file_name = re.sub(r"[#:]", "", color)
+        path = wf.cachefile(f"{file_name}.png")
+        image.save(path)
+        return path
+
+except ModuleNotFoundError:
+    logger.warning("PIL not found, no thumbnails will be generated")
+
 
 
 def hex2rgb(s):
@@ -61,7 +127,7 @@ into a tuple of integers representing hue, saturation, and lightness values."""
 
 
 class Color:
-    def __init__(self, rgb):
+    def __init__(self, rgb: tuple[int,int,int]):
         self.rgb = rgb
         self.hsl = rgb2hsl(rgb)
 
@@ -75,28 +141,28 @@ class Color:
         return "%d° %s%% %s%%" % (self.hsl[0], int(self.hsl[1] * 100), int(self.hsl[2] * 100))
 
 def main(wf):
-    args = wf.args
-    # args = ["78a9ff"]
-
-    rgb = hex2rgb(args[0])
+    query = wf.args[0]
+    rgb = color2rgb(query)
+    if rgb is None:
+        rgb = hex2rgb(query)
     if rgb is None:
         return
     color = Color(rgb)
     values = [(color.asHex(), "HEX"),
               (color.asRGB(), "Red, Green, Blue"),
               (color.asHSL(), "Hue, Saturation, Lightness")]
+    icon_path = generate_icon(color.asHex())
     for value, subtitle in values:
         wf.add_item(title=value,
                     subtitle=subtitle,
                     arg=value,
                     copytext=value,
-                    valid=True)
+                    valid=True,
+                    icon=icon_path,
+                    icontype="filepath")
+        
 
     wf.send_feedback()
 
-logger = None
-
 if __name__ == "__main__":
-    wf = Workflow3()
-    logger = wf.logger
     sys.exit(wf.run(main))

@@ -19,6 +19,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>264B6241-D3A6-4613-8842-3DDC8DC138F6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2D718740-28C5-4B18-98D5-1BC610F378A8</key>
 		<array>
 			<dict>
@@ -257,25 +270,6 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -405,6 +399,25 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -514,6 +527,55 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>info</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>info.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Text Information</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>264B6241-D3A6-4613-8842-3DDC8DC138F6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -522,109 +584,120 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 		<key>0843E362-1C33-4D5A-B1CB-DC12F6C71DB7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1030</integer>
+			<real>1030</real>
 			<key>ypos</key>
-			<integer>285</integer>
+			<real>285</real>
 		</dict>
 		<key>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</key>
 		<dict>
 			<key>note</key>
 			<string>Replace the plain-text markdown content on the pasteboard with rich-text formatted HTML.</string>
 			<key>xpos</key>
-			<integer>635</integer>
+			<real>635</real>
 			<key>ypos</key>
-			<integer>55</integer>
+			<real>55</real>
 		</dict>
 		<key>16377B48-4664-4EFC-8DB8-AD45192F9B49</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1030</integer>
+			<real>1030</real>
 			<key>ypos</key>
-			<integer>55</integer>
+			<real>55</real>
+		</dict>
+		<key>264B6241-D3A6-4613-8842-3DDC8DC138F6</key>
+		<dict>
+			<key>note</key>
+			<string>Return information about the passed text.</string>
+			<key>xpos</key>
+			<real>65</real>
+			<key>ypos</key>
+			<real>630</real>
 		</dict>
 		<key>2D718740-28C5-4B18-98D5-1BC610F378A8</key>
 		<dict>
 			<key>note</key>
 			<string>Replace the plain-text markdown content on the pasteboard with rich-text formatted HTML AND paste into the active application.</string>
 			<key>xpos</key>
-			<integer>640</integer>
+			<real>640</real>
 			<key>ypos</key>
-			<integer>285</integer>
+			<real>285</real>
 		</dict>
 		<key>4D5AF64F-36C3-425C-A1AF-27CAF5790E12</key>
 		<dict>
 			<key>note</key>
 			<string>Apply a collection of transformations to some text and present it as a list.</string>
 			<key>xpos</key>
-			<integer>70</integer>
+			<real>70</real>
 			<key>ypos</key>
-			<integer>205</integer>
+			<real>205</real>
 		</dict>
 		<key>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>395</integer>
+			<real>1030</real>
 			<key>ypos</key>
-			<integer>725</integer>
+			<real>540</real>
 		</dict>
 		<key>71F2A25E-4FF2-4BCE-9B81-21CFCAC21CFE</key>
 		<dict>
 			<key>note</key>
 			<string>Encode text in a variety of different encodings.</string>
 			<key>xpos</key>
-			<integer>70</integer>
+			<real>70</real>
 			<key>ypos</key>
-			<integer>30</integer>
+			<real>30</real>
 		</dict>
 		<key>8B062CEB-55C1-4FD0-9EB5-D66CDC510BA6</key>
 		<dict>
 			<key>note</key>
 			<string>Takes a color in hex form, e.g. #c0c0c0, and provides a variety of different encodings of it.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<real>65</real>
 			<key>ypos</key>
-			<integer>420</integer>
+			<real>420</real>
 		</dict>
 		<key>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</key>
 		<dict>
 			<key>xpos</key>
-			<integer>830</integer>
+			<real>830</real>
 			<key>ypos</key>
-			<integer>55</integer>
+			<real>55</real>
 		</dict>
 		<key>AE8B461C-09DC-4C21-8067-8254FEE667BA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>830</integer>
+			<real>830</real>
 			<key>ypos</key>
-			<integer>285</integer>
+			<real>285</real>
 		</dict>
 		<key>DB20FF40-777A-49D4-B082-9CD748F8F94F</key>
 		<dict>
 			<key>note</key>
 			<string>...because we're not animals, trim the whitespace.</string>
 			<key>xpos</key>
-			<integer>265</integer>
+			<real>870</real>
 			<key>ypos</key>
-			<integer>755</integer>
+			<real>570</real>
 		</dict>
 		<key>DF75135B-1FCE-4162-92E7-B93C1EB889C9</key>
 		<dict>
 			<key>note</key>
 			<string>Copy the current selection to the clipboard as plain text.  This comes in handy to get plain text content out of rich text fields, web pages, etc.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<real>640</real>
 			<key>ypos</key>
-			<integer>725</integer>
+			<real>540</real>
 		</dict>
 		<key>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</key>
 		<dict>
 			<key>xpos</key>
-			<integer>400</integer>
+			<real>375</real>
 			<key>ypos</key>
-			<integer>130</integer>
+			<real>305</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>
