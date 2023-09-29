@@ -136,6 +136,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>EBE9C16C-6D60-4A03-B222-3049EDADDAFA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Bryan Kyle</string>
@@ -283,7 +296,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>t</string>
+				<string>d</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -299,11 +312,11 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>transform.py</string>
+				<string>decode.py</string>
 				<key>subtext</key>
-				<string>Transform text</string>
+				<string></string>
 				<key>title</key>
-				<string>Transform</string>
+				<string>Decode text</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -312,7 +325,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>4D5AF64F-36C3-425C-A1AF-27CAF5790E12</string>
+			<string>EBE9C16C-6D60-4A03-B222-3049EDADDAFA</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -431,7 +444,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>ci</string>
+				<string>t</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -447,11 +460,11 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>color.py</string>
+				<string>transform.py</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Transform text</string>
 				<key>title</key>
-				<string>Color Info</string>
+				<string>Transform</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -460,7 +473,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>8B062CEB-55C1-4FD0-9EB5-D66CDC510BA6</string>
+			<string>4D5AF64F-36C3-425C-A1AF-27CAF5790E12</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -526,6 +539,55 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<string>DB20FF40-777A-49D4-B082-9CD748F8F94F</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ci</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>color.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Color Info</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8B062CEB-55C1-4FD0-9EB5-D66CDC510BA6</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -611,7 +673,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>xpos</key>
 			<real>65</real>
 			<key>ypos</key>
-			<real>630</real>
+			<real>790</real>
 		</dict>
 		<key>2D718740-28C5-4B18-98D5-1BC610F378A8</key>
 		<dict>
@@ -629,7 +691,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>xpos</key>
 			<real>70</real>
 			<key>ypos</key>
-			<real>205</real>
+			<real>365</real>
 		</dict>
 		<key>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</key>
 		<dict>
@@ -654,7 +716,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>xpos</key>
 			<real>65</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>580</real>
 		</dict>
 		<key>948C1725-5A4E-4D65-81FE-1F7DDDBD8C24</key>
 		<dict>
@@ -687,6 +749,15 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<real>640</real>
 			<key>ypos</key>
 			<real>540</real>
+		</dict>
+		<key>EBE9C16C-6D60-4A03-B222-3049EDADDAFA</key>
+		<dict>
+			<key>note</key>
+			<string>Decode text in a variety of different encodings.</string>
+			<key>xpos</key>
+			<real>70</real>
+			<key>ypos</key>
+			<real>200</real>
 		</dict>
 		<key>ECC952EC-95A2-4BB0-BFB9-17CC7E54A935</key>
 		<dict>
