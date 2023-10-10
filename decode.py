@@ -10,6 +10,12 @@ import sys
 import urllib.parse
 from workflow import Workflow3
 
+def base64decode(s: str) -> str:
+    try:
+        return base64.b64decode(s.encode()).decode()
+    except ValueError:
+        return None
+
 def main(wf):
     args = wf.args
 
@@ -17,12 +23,17 @@ def main(wf):
                 (urllib.parse.unquote_plus, "URL (Plus)"),
                 (lambda x: base64.b64decode(x.encode()).decode(), "Base 64")]
     for decoder, name in decoders:
-        decoded = decoder(args[0])
-        wf.add_item(title=decoded,
-                    subtitle=name,
-                    arg=decoded,
-                    copytext=decoded,
-                    valid=True)
+        try:
+            decoded = decoder(args[0])
+            if decoded:
+                wf.add_item(title=decoded,
+                            subtitle=name,
+                            arg=decoded,
+                            copytext=decoded,
+                            valid=True)
+        except ValueError:
+
+            pass
     wf.send_feedback()
 
 if __name__ == "__main__":

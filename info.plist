@@ -176,7 +176,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>e</string>
+				<string>te</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -194,9 +194,9 @@
 				<key>scriptfile</key>
 				<string>encode.py</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Encode text with a variety of different encoding schemes, e.g. URL encoding, base64.</string>
 				<key>title</key>
-				<string>Encode text</string>
+				<string>Encode...</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -208,32 +208,6 @@
 			<string>71F2A25E-4FF2-4BCE-9B81-21CFCAC21CFE</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>tm</string>
-				<key>subtext</key>
-				<string>Transform Markdown text on the clipboard to rich text</string>
-				<key>text</key>
-				<string>Transform Markdown</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>inboundconfig</key>
-			<dict>
-				<key>inputmode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -283,6 +257,32 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>tm</string>
+				<key>subtext</key>
+				<string>Transform Markdown text on the clipboard to rich text</string>
+				<key>text</key>
+				<string>Transform Markdown</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>inputmode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>0BAFDDDF-56D9-4C9F-8191-3D6ADD379707</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -296,7 +296,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>d</string>
+				<string>td</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -314,9 +314,9 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>scriptfile</key>
 				<string>decode.py</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Decode text that has previously been encoded with common encoding schemes, e.g. base64.</string>
 				<key>title</key>
-				<string>Decode text</string>
+				<string>Decode...</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -444,7 +444,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>t</string>
+				<string>tt</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -462,9 +462,9 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>scriptfile</key>
 				<string>transform.py</string>
 				<key>subtext</key>
-				<string>Transform text</string>
+				<string>Apply transformations to text, e.g. convert to UPPER CASE, convert to lower case, convert to Title Case, convert to snake_case, etc.</string>
 				<key>title</key>
-				<string>Transform</string>
+				<string>Transform...</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -556,7 +556,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>ci</string>
+				<string>tci</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -574,7 +574,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>scriptfile</key>
 				<string>color.py</string>
 				<key>subtext</key>
-				<string></string>
+				<string>View information about a color such as its representation in hex, RGB components, and HSL values.</string>
 				<key>title</key>
 				<string>Color Info</string>
 				<key>type</key>
@@ -623,7 +623,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 				<key>scriptfile</key>
 				<string>info.py</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Display some descriptive statistics about the provided text such as the number of words and letters.</string>
 				<key>title</key>
 				<string>Text Information</string>
 				<key>type</key>
@@ -691,7 +691,7 @@ osascript -e "set the clipboard to «data HTML${hex}»"</string>
 			<key>xpos</key>
 			<real>70</real>
 			<key>ypos</key>
-			<real>365</real>
+			<real>370</real>
 		</dict>
 		<key>5EB41965-B7AF-482A-B8B9-C33C2189D3B6</key>
 		<dict>
