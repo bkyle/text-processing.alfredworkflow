@@ -40,6 +40,21 @@ def h4ck3rC453(s):
 def remove_newlines(s):
     return re.sub(r"\s*\r?\n\s*", " ", s)
 
+def title_case(s):
+    words = re.split(" ", s)
+    
+    for i, word in enumerate(words):
+        if i == 0 or i == len(words)-1:
+            words[i] = word.title()
+        elif word.lower() in ("a", "an", "and", "of", "the", "to"):
+            words[i] = word.lower()
+        elif word in ("API", "URL"):
+            words[i] = word.upper()
+        else:
+            words[i] = word.title()
+        
+    return " ".join(words)
+
 def main(wf):
 
     s = wf.args[0]
@@ -69,7 +84,7 @@ def main(wf):
     text_transformers = [(remove_newlines, "No newlines"),
                          (str.upper, "UPPER"),
                          (str.lower, "lower"),
-                         (str.title, "Title Case"),
+                         (title_case, "Title Case"),
                          (str.capitalize, "Capitalize"),
                          (str.swapcase, "sWAP cASE"),
                          (snake_case, "snake_case"),
